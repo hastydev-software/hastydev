@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Grotesk, Darumadrop_One, Gruppo } from "next/font/google";
+import {
+  Poppins,
+  Space_Grotesk,
+  Darumadrop_One,
+  Gruppo,
+} from "next/font/google";
 import { StructuredData } from "@/client/components/StructuredData";
 import "./globals.css";
 
@@ -35,10 +40,12 @@ const gruppo = Gruppo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hastydev.com.br"),
   title: {
-    default: "HastyDev - Soluções Web3, Blockchain e Criptomoedas | Desenvolvimento P2P",
+    default:
+      "HastyDev - Soluções Web3, Blockchain e Criptomoedas | Desenvolvimento P2P",
     template: "%s | HastyDev",
   },
-  description: "Transforme sua ideia em realidade no universo Web3 com a HastyDev. Oferecemos soluções completas que integram tecnologia blockchain, jurídico e marketing para criar produtos escaláveis no ecossistema descentralizado. HastyP2P Core, HastyPay Engine e mais.",
+  description:
+    "Transforme sua ideia em realidade no universo Web3 com a HastyDev. Oferecemos soluções completas que integram tecnologia blockchain, jurídico e marketing para criar produtos escaláveis no ecossistema descentralizado. HastyP2P Core, HastyPay Engine e mais.",
   keywords: [
     "Web3",
     "blockchain",
@@ -72,7 +79,8 @@ export const metadata: Metadata = {
     url: "https://hastydev.com.br",
     siteName: "HastyDev",
     title: "HastyDev - Soluções Web3, Blockchain e Criptomoedas",
-    description: "Especialistas em transformar ideias em realidade no universo Web3. Soluções completas de blockchain, smart contracts e desenvolvimento P2P para o ecossistema descentralizado.",
+    description:
+      "Especialistas em transformar ideias em realidade no universo Web3. Soluções completas de blockchain, smart contracts e desenvolvimento P2P para o ecossistema descentralizado.",
     images: [
       {
         url: "/og-image.png",
@@ -85,7 +93,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "HastyDev - Soluções Web3, Blockchain e Criptomoedas",
-    description: "Transforme sua ideia em realidade no universo Web3. Soluções completas de blockchain, smart contracts e desenvolvimento P2P.",
+    description:
+      "Transforme sua ideia em realidade no universo Web3. Soluções completas de blockchain, smart contracts e desenvolvimento P2P.",
     images: ["/twitter-image.png"],
     creator: "@hastydev",
   },
@@ -105,9 +114,7 @@ export const metadata: Metadata = {
       { url: "/favicon.ico" },
       { url: "/icon.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.json",
   alternates: {
