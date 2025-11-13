@@ -1,4 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HastyDev - Soluções Web3 e Blockchain
+
+Website oficial da HastyDev - especialistas em transformar ideias em realidade no universo Web3.
+
+## 🚀 Sobre o Projeto
+
+Este é o website institucional da HastyDev, desenvolvido com Next.js 15 e otimizado para performance, SEO e acessibilidade.
+
+## 🛠️ Tecnologias
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **Next Font** - Otimização de fontes (Poppins, Space Grotesk, Darumadrop One, Gruppo)
+- **SEO** - Metadados completos, Open Graph, Twitter Cards, sitemap.xml
+
+## 📦 Fontes Otimizadas
+
+As fontes do Google Fonts foram migradas para `next/font/google` para melhor performance:
+
+- **Poppins** - Todos os pesos (100-900) e estilos
+- **Space Grotesk** - Pesos 300-700 (fonte principal)
+- **Darumadrop One** - Peso 400
+- **Gruppo** - Peso 400
+
+## 🎯 Features de SEO
+
+- ✅ Metadados completos e otimizados
+- ✅ Open Graph para redes sociais
+- ✅ Twitter Cards
+- ✅ Sitemap.xml dinâmico
+- ✅ Robots.txt configurado
+- ✅ Manifest.json para PWA
+- ✅ Imagens OG dinâmicas
+- ✅ Structured data ready
+- ✅ Acessibilidade (WCAG)
 
 ## Getting Started
 
@@ -18,7 +53,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load fonts.
 
 ## Learn More
 
@@ -28,6 +63,19 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## 🌐 Deploy
+
+O site está configurado para deploy em produção no domínio **hastydev.com.br**.
+
+## 📝 Licença
+
+© 2024 HastyDev. Todos os direitos reservados.
+
+## 📞 Contato
+
+- Instagram: [@hastydev](http://instagram.com/hastydev/)
+- LinkedIn: [HastyDev](https://www.linkedin.com/company/hastydev/)
 
 ## Deploy on Vercel
 
