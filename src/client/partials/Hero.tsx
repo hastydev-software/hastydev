@@ -44,16 +44,25 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-start px-4 sm:px-6 lg:px-28 pt-20 pb-32 overflow-x-hidden"
       aria-label="Seção principal - Hero"
     >
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/img/image.png"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-          aria-hidden="true"
-        />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/bg-hasty.mp4" type="video/mp4" />
+          <Image
+            src="/img/image.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+            aria-hidden="true"
+          />
+        </video>
         <div
           className="absolute inset-0 bg-[rgba(14,15,26,0.5)]"
           aria-hidden="true"
