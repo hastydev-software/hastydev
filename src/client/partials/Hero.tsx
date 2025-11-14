@@ -6,15 +6,27 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const logos = [
-  { src: "/img/dsc.png", alt: "DSC", url: "#" },
-  { src: "/img/dig.png", alt: "Dig", url: "#" },
-  { src: "/img/alfredp2p.png", alt: "Alfred P2P", url: "https://alfredp2p.io" },
+  {
+    name: "dseclab",
+    alt: "dseclab",
+    url: "https://dseclab.io",
+  },
+  { name: "dig", src: "/img/dig.png", alt: "Dig", url: "#" },
+  {
+    name: "alfred",
+    alt: "Alfred P2P",
+    url: "https://alfredp2p.io",
+  },
   {
     src: "/img/johngalt.png",
     alt: "John Galt P2P",
     url: "#",
   },
-  { src: "/img/paguebit.png", alt: "PagueBit", url: "https://paguebit.com" },
+  {
+    name: "paguebit",
+    alt: "PagueBit",
+    url: "https://paguebit.com",
+  },
   {
     src: "/img/criptopix.png",
     alt: "CriptoPIX",
@@ -214,7 +226,7 @@ export function Hero() {
           >
             {duplicatedLogos.map((logo, index) => (
               <motion.a
-                key={`left-${logo.alt}-${logo.src}-${index}`}
+                key={`left-${logo.alt}-${index}`}
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -228,7 +240,9 @@ export function Hero() {
               >
                 <div className="w-32 h-12 flex items-center justify-center shrink-0">
                   <Image
-                    src={logo.src}
+                    src={`${
+                      logo.name ? `/partners/${logo.name}/logo.svg` : logo.src
+                    }`}
                     alt={logo.alt}
                     width={120}
                     height={40}
@@ -256,7 +270,7 @@ export function Hero() {
           >
             {duplicatedLogos.map((logo, index) => (
               <motion.a
-                key={`right-${logo.alt}-${logo.src}-${index}`}
+                key={`right-${logo.alt}-${index}`}
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -270,7 +284,9 @@ export function Hero() {
               >
                 <div className="w-32 h-12 flex items-center justify-center shrink-0">
                   <Image
-                    src={logo.src}
+                    src={`${
+                      logo.name ? `/partners/${logo.name}/logo.svg` : logo.src
+                    }`}
                     alt={logo.alt}
                     width={120}
                     height={40}
