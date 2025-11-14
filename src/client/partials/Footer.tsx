@@ -73,26 +73,25 @@ export function Footer() {
 
   return (
     <footer className="relative bg-linear-to-b from-[#060a1b] via-[#0a0e27] to-[#000000] overflow-hidden border-t border-white/10">
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#35a7ff]/3 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-1/2 left-1/3 w-80 h-80 bg-[#4984c8]/2 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#35a7ff]/3 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-1/2 left-1/3 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 bg-[#4984c8]/2 rounded-full blur-3xl -z-10" />
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28 py-16 sm:py-20 md:py-24 lg:py-32">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-8"
           >
             <motion.div
               variants={itemVariants}
-              className="lg:col-span-2 space-y-6"
+              className="lg:col-span-2 space-y-4 sm:space-y-5 md:space-y-6"
             >
-              <div className="relative h-12 w-40">
+              <div className="relative h-8 sm:h-10 w-24 sm:w-32">
                 <Image
                   src="/logo.svg"
                   alt="HastyDev Logo"
@@ -105,8 +104,6 @@ export function Footer() {
                 aumentaram conversões, eliminaram erros e integraram automação
                 com performance.
               </p>
-
-              {/* Contact Info */}
               <div className="space-y-3">
                 <a
                   href="mailto:contato@hastydev.com"

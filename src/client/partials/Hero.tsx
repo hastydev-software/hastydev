@@ -53,7 +53,7 @@ export function Hero() {
   return (
     <section
       id="main-content"
-      className="relative min-h-screen flex items-center justify-start px-4 sm:px-6 lg:px-28 pt-20 pb-32 overflow-x-hidden"
+      className="relative min-h-screen flex items-center justify-start px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28 pt-16 sm:pt-20 md:pt-24 pb-32 sm:pb-40 overflow-x-hidden"
       aria-label="Seção principal - Hero"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -79,20 +79,20 @@ export function Hero() {
           className="absolute inset-0 bg-[rgba(14,15,26,0.5)]"
           aria-hidden="true"
         />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#35a7ff]/10 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4984c8]/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#35a7ff]/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#4984c8]/10 rounded-full blur-3xl -z-10" />
       </div>
 
-      <div className="relative z-10 max-w-[700px]">
+      <div className="relative z-10 w-full max-w-[700px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-6"
+          className="mb-4 sm:mb-6"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#35a7ff]/10 border border-[#35a7ff]/30 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-[#35a7ff]" aria-hidden="true" />
-            <span className="text-[#35a7ff] text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#35a7ff]/10 border border-[#35a7ff]/30 backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#35a7ff]" aria-hidden="true" />
+            <span className="text-[#35a7ff] text-xs sm:text-sm font-semibold">
               Transformação Digital Web3
             </span>
           </div>
@@ -101,17 +101,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-3 mb-6"
+          className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8"
         >
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
-            <Check className="w-4 h-4 text-[#35a7ff]" aria-hidden="true" />
-            <span className="text-white text-sm font-medium">
+          <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+            <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#35a7ff]" aria-hidden="true" />
+            <span className="text-white text-xs sm:text-sm font-medium">
               Setup em 21 dias
             </span>
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
-            <Check className="w-4 h-4 text-[#35a7ff]" aria-hidden="true" />
-            <span className="text-white text-sm font-medium">
+          <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+            <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#35a7ff]" aria-hidden="true" />
+            <span className="text-white text-xs sm:text-sm font-medium">
               PIX + Cripto Integrado
             </span>
           </div>
@@ -120,7 +120,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-4xl md:text-5xl lg:text-6xl leading-tight font-bold text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-bold text-white mb-4 sm:mb-6"
         >
           A ponte definitiva entre o sistema financeiro{" "}
           <span className="bg-linear-to-r from-[#35a7ff] via-[#4984c8] to-[#35a7ff] bg-clip-text text-transparent">
@@ -131,7 +131,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base lg:text-lg text-white/80 leading-relaxed mb-8 max-w-[600px]"
+          className="text-sm sm:text-base md:text-lg lg:text-lg text-white/80 leading-relaxed mb-6 sm:mb-8 max-w-[600px]"
         >
           Tecnologia, automação e jurídico integrados: construímos sua stack
           Bitcoin, automatizamos processos críticos e providenciamos a estrutura
@@ -142,7 +142,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex gap-4"
+          className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto"
         >
           <button
             onClick={() => {
@@ -152,12 +152,12 @@ export function Hero() {
               }
             }}
             className={cn(
-              "group relative inline-flex items-center gap-2 px-8 py-3.5",
-              "text-white font-semibold text-base rounded-lg",
+              "group relative inline-flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5",
+              "text-white font-semibold text-sm sm:text-base rounded-lg",
               "transition-all duration-300",
               "hover:shadow-lg hover:shadow-[#35a7ff]/40 hover:scale-105",
               "focus:outline-none focus:ring-2 focus:ring-[#35a7ff] focus:ring-offset-2 focus:ring-offset-[#0e1e31]",
-              "active:scale-95 overflow-hidden",
+              "active:scale-95 overflow-hidden w-full sm:w-auto",
               "border-[0.2px] border-white border-solid"
             )}
             style={{
@@ -165,10 +165,10 @@ export function Hero() {
             }}
             aria-label="Iniciar transformação digital com a HastyDev"
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center justify-center sm:justify-start gap-2 whitespace-nowrap">
               Comece sua transformação
               <ArrowRight
-                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </span>
@@ -187,12 +187,12 @@ export function Hero() {
               }
             }}
             className={cn(
-              "inline-flex items-center gap-2 px-8 py-3.5",
+              "inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5",
               "bg-white/10 hover:bg-white/15 text-white",
-              "font-semibold text-base rounded-lg border border-white/20",
+              "font-semibold text-sm sm:text-base rounded-lg border border-white/20",
               "transition-all duration-300",
               "focus:outline-none focus:ring-2 focus:ring-[#35a7ff] focus:ring-offset-2 focus:ring-offset-[#0e1e31]",
-              "active:scale-95"
+              "active:scale-95 w-full sm:w-auto whitespace-nowrap"
             )}
             aria-label="Falar com um especialista da HastyDev"
           >
@@ -201,17 +201,17 @@ export function Hero() {
         </motion.div>
       </div>
       <div
-        className="absolute bottom-0 left-0 w-full overflow-hidden z-20 flex flex-col gap-4 bg-linear-to-t from-[rgba(14,30,49,0.95)] to-transparent px-4 py-6"
+        className="absolute bottom-0 left-0 w-full overflow-hidden z-20 flex flex-col gap-3 sm:gap-4 bg-linear-to-t from-[rgba(14,30,49,0.95)] to-transparent px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6"
         aria-label="Nossos clientes e parceiros"
       >
         <div className="text-center">
-          <p className="text-white/60 text-sm font-medium">
+          <p className="text-white/60 text-xs sm:text-sm font-medium">
             Confiado por mais de 50+ empresas no Brasil
           </p>
         </div>
-        <div className="relative flex items-center gap-8 whitespace-nowrap overflow-hidden">
+        <div className="relative flex items-center gap-4 sm:gap-6 md:gap-8 whitespace-nowrap overflow-hidden">
           <motion.div
-            className="flex items-center gap-8"
+            className="flex items-center gap-4 sm:gap-6 md:gap-8"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -238,7 +238,7 @@ export function Hero() {
                 whileHover={{ scale: 1.1 }}
                 aria-label={`Visitar ${logo.alt}`}
               >
-                <div className="w-32 h-12 flex items-center justify-center shrink-0">
+                <div className="w-24 sm:w-28 md:w-32 h-8 sm:h-10 md:h-12 flex items-center justify-center shrink-0">
                   <Image
                     src={`${
                       logo.name ? `/partners/${logo.name}/logo.svg` : logo.src
@@ -246,16 +246,16 @@ export function Hero() {
                     alt={logo.alt}
                     width={120}
                     height={40}
-                    className="max-h-8 w-auto object-contain"
+                    className="max-h-6 sm:max-h-7 md:max-h-8 w-auto object-contain"
                   />
                 </div>
               </motion.a>
             ))}
           </motion.div>
         </div>
-        <div className="relative flex items-center gap-8 whitespace-nowrap overflow-hidden">
+        <div className="relative flex items-center gap-4 sm:gap-6 md:gap-8 whitespace-nowrap overflow-hidden">
           <motion.div
-            className="flex items-center gap-8"
+            className="flex items-center gap-4 sm:gap-6 md:gap-8"
             animate={{
               x: ["-50%", "0%"],
             }}
@@ -282,7 +282,7 @@ export function Hero() {
                 whileHover={{ scale: 1.1 }}
                 aria-label={`Visitar ${logo.alt}`}
               >
-                <div className="w-32 h-12 flex items-center justify-center shrink-0">
+                <div className="w-24 sm:w-28 md:w-32 h-8 sm:h-10 md:h-12 flex items-center justify-center shrink-0">
                   <Image
                     src={`${
                       logo.name ? `/partners/${logo.name}/logo.svg` : logo.src
@@ -290,7 +290,7 @@ export function Hero() {
                     alt={logo.alt}
                     width={120}
                     height={40}
-                    className="max-h-8 w-auto object-contain"
+                    className="max-h-6 sm:max-h-7 md:max-h-8 w-auto object-contain"
                   />
                 </div>
               </motion.a>
