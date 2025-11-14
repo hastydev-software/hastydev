@@ -98,10 +98,10 @@ export function Header() {
             aria-label="HastyDev - Ir para o início"
           >
             <Image
-              src="/img/Logo.png"
+              src="/logo.svg"
               alt="HastyDev - Soluções Web3 e Blockchain"
               className="h-8 lg:h-10 w-auto"
-              width={150}
+              width={120}
               height={40}
               priority
             />
@@ -119,7 +119,11 @@ export function Header() {
               key={item.name}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 + 0.08 * index }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: 0.1 + 0.08 * index,
+              }}
             >
               <a
                 href={item.href}
@@ -227,7 +231,6 @@ export function Header() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="px-4 py-6 space-y-2 bg-linear-to-b from-[#0e1e31]/80 to-[#0e1e31]"
         >
-          {/* Menu Items */}
           <div className="space-y-2 pb-4 border-b border-white/10">
             {navItems.map((item, index) => (
               <motion.a
@@ -253,8 +256,6 @@ export function Header() {
               </motion.a>
             ))}
           </div>
-
-          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{

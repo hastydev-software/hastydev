@@ -6,7 +6,7 @@ export function StructuredData() {
     '@type': 'Organization',
     name: 'HastyDev',
     url: 'https://hastydev.com.br',
-    logo: 'https://hastydev.com.br/image/2024024_Logo_HASTYDEV_Horizontal_Negativo.png',
+    logo: 'https://hastydev.com.br/logo.svg',
     description: 'Especialistas em transformar ideias em realidade no universo Web3. Oferecemos soluções completas que integram tecnologia blockchain, jurídico e marketing para criar produtos escaláveis no ecossistema descentralizado.',
     foundingDate: '2024',
     contactPoint: {
