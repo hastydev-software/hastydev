@@ -59,16 +59,16 @@ export function Footer() {
   ];
 
   const products = [
-    { label: "HastyPay Engine", href: "#" },
-    { label: "HastyP2P Core", href: "#" },
-    { label: "HastyLegal Guide", href: "#" },
-    { label: "HastyBrand Studio", href: "#" },
+    { label: "HastyPay Engine", href: "#products" },
+    { label: "HastyP2P Core", href: "#products" },
+    { label: "HastyLegal Guide", href: "#products" },
+    { label: "HastyBrand Studio", href: "#products" },
   ];
 
   const footerLinks = [
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Plataforma", href: "#plataforma" },
-    { label: "Sobre nós", href: "#sobre" },
+    { label: "Soluções", href: "#products" },
+    { label: "Plataforma", href: "#tech" },
+    { label: "Sobre nós", href: "#about" },
   ];
 
   return (
