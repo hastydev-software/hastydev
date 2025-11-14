@@ -90,22 +90,22 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="relative bg-linear-to-b from-[#060a1b] via-[#0e0f17] to-[#0a0c18] overflow-hidden py-24 md:py-32 lg:py-40"
+      className="relative bg-linear-to-b from-[#060a1b] via-[#0e0f17] to-[#0a0c18] overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32 2xl:py-40 px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/4 right-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-96 lg:h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-96 lg:h-96 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 2xl:gap-20"
         >
-          <motion.div variants={itemVariants} className="space-y-12">
-            <div className="relative h-10 w-32">
+          <motion.div variants={itemVariants} className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
+            <div className="relative h-8 sm:h-10 w-24 sm:w-32">
               <Image
                 src="/logo.svg"
                 alt="HastyDev Logo"

@@ -85,7 +85,7 @@ export function Header() {
         isScrolled && "shadow-xl shadow-black/20"
       )}
     >
-      <nav className="w-full px-4 lg:px-8 flex justify-between items-center h-16 lg:h-20 gap-6 lg:gap-8  mx-auto">
+      <nav className="w-full px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28 flex justify-between items-center h-14 sm:h-16 md:h-18 lg:h-20 gap-4 sm:gap-6 lg:gap-8 mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -106,7 +106,7 @@ export function Header() {
             <Image
               src="/logo.svg"
               alt="HastyDev - Soluções Web3 e Blockchain"
-              className="h-8 lg:h-10 w-auto"
+              className="h-6 sm:h-8 lg:h-10 w-auto"
               width={120}
               height={40}
               priority
@@ -118,7 +118,7 @@ export function Header() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="hidden lg:flex items-center gap-6"
+          className="hidden lg:flex items-center gap-4 md:gap-5 lg:gap-6"
         >
           {navItems.map((item, index) => (
             <motion.li

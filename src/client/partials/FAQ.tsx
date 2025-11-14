@@ -80,23 +80,22 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative bg-linear-to-b from-[#0a0e27] via-[#0e1e31] to-[#060a1b] overflow-hidden py-24 md:py-32 lg:py-40">
-      {/* Background decorative elements */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
+    <section className="relative bg-linear-to-b from-[#0a0e27] via-[#0e1e31] to-[#060a1b] overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32 2xl:py-40">
+      <div className="absolute top-1/3 right-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-12 sm:mb-16 md:mb-18 lg:mb-20"
         >
-          <p className="text-[#35a7ff] text-sm md:text-base font-semibold uppercase tracking-widest mb-4">
+          <p className="text-[#35a7ff] text-xs sm:text-sm md:text-base font-semibold uppercase tracking-widest mb-3 sm:mb-4">
             FAQ
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 sm:mb-4">
             O que você precisa saber para
             <br />
             decidir com{" "}
@@ -104,7 +103,7 @@ export function FAQSection() {
               segurança
             </span>
           </h2>
-          <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-white/60 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
             Respostas claras sobre nossa abordagem em Web3, compliance e entrega
           </p>
         </motion.div>
@@ -129,24 +128,24 @@ export function FAQSection() {
                   }
                 }}
                 className={cn(
-                  "w-full px-6 py-4 md:py-5",
+                  "w-full px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5",
                   "bg-white/5 hover:bg-white/10",
                   "border border-white/10 hover:border-[#35a7ff]/30",
                   "rounded-lg transition-all duration-300",
-                  "text-left flex items-center justify-between gap-4",
+                  "text-left flex items-center justify-between gap-3 sm:gap-4",
                   "focus:outline-none focus:ring-2 focus:ring-[#35a7ff] focus:ring-offset-2 focus:ring-offset-[#0a0e27]",
                   openIndex === item.id && "bg-white/10 border-[#35a7ff]/30"
                 )}
                 aria-expanded={openIndex === item.id}
               >
-                <span className="flex-1">
-                  <h3 className="text-white font-semibold text-base md:text-lg">
+                <span className="flex-1 min-w-0">
+                  <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg">
                     {item.question}
                   </h3>
                 </span>
                 <ChevronDown
                   className={cn(
-                    "w-5 h-5 text-[#35a7ff] transition-transform duration-300 shrink-0",
+                    "w-4 h-4 sm:w-5 sm:h-5 text-[#35a7ff] transition-transform duration-300 shrink-0",
                     openIndex === item.id && "rotate-180"
                   )}
                 />
@@ -161,7 +160,7 @@ export function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 py-4 md:py-5 bg-white/5 border border-t-0 border-white/10 rounded-b-lg text-white/70 text-sm md:text-base leading-relaxed">
+                    <div className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 bg-white/5 border border-t-0 border-white/10 rounded-b-lg text-white/70 text-xs sm:text-sm md:text-base leading-relaxed">
                       {item.answer}
                     </div>
                   </motion.div>
@@ -170,21 +169,19 @@ export function FAQSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Contact CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 md:mt-20 text-center"
+          className="mt-12 sm:mt-16 md:mt-18 lg:mt-20 text-center"
         >
-          <p className="text-white/60 text-lg mb-6">
+          <p className="text-white/60 text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
             Não encontrou sua pergunta?
           </p>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold text-base rounded-lg bg-linear-to-r from-[#0e1e31] to-[#4984c8] hover:from-[#1a2a40] hover:to-[#5a94d8] transition-all duration-300 hover:shadow-lg hover:shadow-[#35a7ff]/40"
+            className="inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg bg-linear-to-r from-[#0e1e31] to-[#4984c8] hover:from-[#1a2a40] hover:to-[#5a94d8] transition-all duration-300 hover:shadow-lg hover:shadow-[#35a7ff]/40"
           >
             Entre em contato
           </a>

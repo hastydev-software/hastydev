@@ -65,7 +65,7 @@ export function Tech() {
   return (
     <section
       id="tech"
-      className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-28 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 2xl:py-40 px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-28 overflow-hidden"
       aria-label="Seção de Tecnologia e Plataforma"
     >
       {/* Background com gradiente */}
@@ -77,8 +77,8 @@ export function Tech() {
       />
 
       {/* Efeito de glow */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/4 right-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-96 lg:h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-1/3 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-80 lg:h-80 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
 
       <motion.div
         variants={containerVariants}
@@ -87,16 +87,16 @@ export function Tech() {
         viewport={{ once: true, margin: "-100px" }}
         className="max-w-7xl mx-auto"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-12 items-center">
           {/* Lado Esquerdo - Conteúdo */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-5 md:space-y-6">
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#35a7ff]/10 border border-[#35a7ff]/30 backdrop-blur-sm w-fit"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#35a7ff]/10 border border-[#35a7ff]/30 backdrop-blur-sm w-fit"
             >
-              <span className="w-2 h-2 rounded-full bg-[#35a7ff]" />
-              <span className="text-[#35a7ff] text-sm font-semibold">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#35a7ff]" />
+              <span className="text-[#35a7ff] text-xs sm:text-sm font-semibold">
                 O futuro é descentralizado — o juridicamente seguro.
               </span>
             </motion.div>
@@ -104,7 +104,7 @@ export function Tech() {
             {/* Título */}
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight"
             >
               Tecnologia que opera dentro da lei.
               <br />
@@ -116,7 +116,7 @@ export function Tech() {
             {/* Descrição */}
             <motion.p
               variants={itemVariants}
-              className="text-base lg:text-lg text-white/70 leading-relaxed max-w-lg"
+              className="text-xs sm:text-sm md:text-base lg:text-base xl:text-lg text-white/70 leading-relaxed max-w-lg"
             >
               Nosso time jurídico especializado em cripto e blockchain garante
               que cada projeto opere com legitimidade e segurança. Oferecemos
@@ -130,14 +130,14 @@ export function Tech() {
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group inline-flex items-center gap-2 px-8 py-3 rounded-lg font-bold text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#35a7ff]/40"
+              className="group inline-flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-bold text-white text-sm sm:text-base transition-all duration-300 hover:shadow-lg hover:shadow-[#35a7ff]/40 w-full sm:w-auto"
               style={{
                 background: "linear-gradient(90deg, #0e1e31, #4984c8, #0e1e31)",
               }}
             >
               Descubra como unir tecnologia e segurança
               <ArrowRight
-                className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </motion.button>
@@ -146,11 +146,11 @@ export function Tech() {
           {/* Lado Direito - Imagem e Cards Flutuantes */}
           <motion.div
             variants={itemVariants}
-            className="relative h-[500px] lg:h-[700px] -mr-28 lg:-mr-40"
+            className="relative h-80 sm:h-96 md:h-[500px] lg:h-[700px] -mr-6 sm:-mr-12 md:-mr-20 lg:-mr-28 2xl:-mr-40"
           >
             {/* Background decorativo atrás do MacBook */}
-            <div className="absolute inset-0 bg-linear-to-br from-[#35a7ff]/10 to-[#4984c8]/10 rounded-3xl blur-2xl" />
-            <div className="absolute -right-20 top-1/3 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl" />
+            <div className="absolute inset-0 bg-linear-to-br from-[#35a7ff]/10 to-[#4984c8]/10 rounded-2xl sm:rounded-3xl blur-2xl" />
+            <div className="absolute -right-12 sm:-right-16 md:-right-20 top-1/3 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-[#35a7ff]/5 rounded-full blur-3xl" />
 
             {/* Imagem do MacBook */}
             <motion.div
