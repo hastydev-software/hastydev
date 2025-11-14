@@ -2,6 +2,7 @@ import { Header } from "@/client/layout/Header/Header";
 import { SkipLink } from "@/client/components/SkipLink";
 import { Hero } from "@/client/partials/Hero";
 import { Stats } from "@/client/partials/Stats";
+import { Products } from "@/client/partials/Products";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <Stats />
+        <Products />
       </main>
     </>
   );
