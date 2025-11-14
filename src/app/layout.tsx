@@ -111,22 +111,31 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon/favicon.ico", sizes: "any" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { 
+        url: "/favicon/apple-touch-icon.png", 
+        sizes: "180x180", 
+        type: "image/png" 
+      },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/favicon/favicon.svg",
+        color: "#35a7ff",
+      },
+    ],
   },
-  manifest: "/manifest.json",
+  manifest: "/favicon/site.webmanifest",
   alternates: {
     canonical: "https://hastydev.com.br",
     languages: {
       "pt-BR": "https://hastydev.com.br",
     },
-  },
-  verification: {
-    google: "verification_token", // Adicione seu token de verificação do Google Search Console
-    // yandex: "verification_token",
-    // bing: "verification_token",
   },
   category: "technology",
   other: {
@@ -134,7 +143,10 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-title": "HastyDev",
     "theme-color": "#35a7ff",
+    "msapplication-TileColor": "#0a0e27",
+    "msapplication-config": "/favicon/browserconfig.xml",
   },
 };
 
@@ -146,6 +158,21 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Meta tags para favicon */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="HastyDev" />
+        <meta name="application-name" content="HastyDev" />
+        <meta name="msapplication-TileColor" content="#0a0e27" />
+        <meta name="theme-color" content="#35a7ff" />
+        
+        {/* Favicon SVG com suporte a cores */}
+        <link rel="mask-icon" href="/favicon/favicon.svg" color="#35a7ff" />
+        
+        {/* Preload de favicon crítico */}
+        <link rel="preload" href="/favicon/favicon.ico" as="image" />
+        <link rel="preload" href="/favicon/apple-touch-icon.png" as="image" />
+        
         <StructuredData />
       </head>
       <body

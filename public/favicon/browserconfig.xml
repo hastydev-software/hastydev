@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square150x150logo src="/favicon/web-app-manifest-192x192.png"/>
+      <TileColor>#0a0e27</TileColor>
+    </tile>
+    <notification>
+      <frequency_ms>604800</frequency_ms>
+      <polling_uri_ms>604800</polling_uri_ms>
+      <cycling_uri_ms>604800</cycling_uri_ms>
+    </notification>
+  </msapplication>
+</browserconfig>

@@ -1,6 +1,33 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: 
 
-# Sitemaps
+# Crawl delay para evitar sobrecarga
+Crawl-delay: 1
+
+# Velocidade máxima de rastreamento
+Request-rate: 10/1m
+
+# Sitemaps para melhor indexação
 Sitemap: https://hastydev.com.br/sitemap.xml
+
+# Google específico
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing específico
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloqueando bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
