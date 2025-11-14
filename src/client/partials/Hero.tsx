@@ -11,7 +11,7 @@ const logos = [
     alt: "dseclab",
     url: "https://dseclab.io",
   },
-  { name: "dig", src: "/img/dig.png", alt: "Dig", url: "#" },
+  { src: "/img/dig.png", alt: "Dig", url: "#" },
   {
     name: "alfred",
     alt: "Alfred P2P",
