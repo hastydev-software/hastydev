@@ -116,13 +116,13 @@ export function Footer() {
                   <span className="text-sm">contato@hastydev.com</span>
                 </a>
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5511911872097"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-white/60 hover:text-[#35a7ff] transition-colors group"
                 >
                   <Phone className="w-4 h-4 text-[#35a7ff] group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">+55 11 99999-9999</span>
+                  <span className="text-sm">+55 11 91187-2097</span>
                 </a>
                 <div className="flex items-start gap-3 text-white/60 group">
                   <MapPin className="w-4 h-4 text-[#35a7ff] mt-0.5 group-hover:scale-110 transition-transform" />

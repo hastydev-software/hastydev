@@ -158,10 +158,10 @@ export function Contact() {
                 <div>
                   <p className="text-white/70 text-sm">WhatsApp</p>
                   <a
-                    href="https://wa.me/5511999999999"
+                    href="https://wa.me/5511911872097"
                     className="text-white font-semibold hover:text-[#35a7ff] transition-colors"
                   >
-                    +55 (11) 99999-9999
+                    +55 (11) 91187-2097
                   </a>
                 </div>
               </motion.div>
