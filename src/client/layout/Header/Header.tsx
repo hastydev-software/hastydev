@@ -7,13 +7,13 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Soluções", href: "#solucoes", label: "Ir para seção de soluções" },
+  { name: "Soluções", href: "#products", label: "Ir para seção de soluções" },
   {
     name: "Plataforma",
-    href: "#plataforma",
+    href: "#tech",
     label: "Ir para seção de plataforma",
   },
-  { name: "Sobre nós", href: "#sobre", label: "Ir para seção sobre nós" },
+  { name: "Sobre nós", href: "#about", label: "Ir para seção sobre nós" },
 ];
 
 export function Header() {
@@ -60,11 +60,17 @@ export function Header() {
     const href = e.currentTarget.getAttribute("href");
     if (href) {
       setActiveSection(href);
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setIsOpen(false);
-      }
+      setIsOpen(false);
+
+      // Aguarda um pouco para garantir que o DOM está pronto
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.warn(`Elemento com ID ${href} não encontrado`);
+        }
+      }, 0);
     }
   };
 
@@ -129,15 +135,25 @@ export function Header() {
                 href={item.href}
                 onClick={handleNavClick}
                 className={cn(
-                  "relative block px-4 py-2 text-sm font-medium transition-all duration-200",
+                  "relative block px-4 py-2 text-sm font-medium transition-all duration-300",
                   activeSection === item.href
-                    ? "text-[#35a7ff] border-b-2 border-[#35a7ff]"
-                    : "text-white/80 hover:text-white hover:border-b-2 hover:border-[#35a7ff]",
+                    ? "text-[#35a7ff]"
+                    : "text-white/80 hover:text-white",
                   "focus:outline-none focus:ring-2 focus:ring-[#35a7ff]/50"
                 )}
                 aria-label={item.label}
               >
-                {item.name}
+                <span>{item.name}</span>
+                {/* Animated underline */}
+                <motion.span
+                  layoutId="navbar-underline"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#35a7ff]"
+                  initial={false}
+                  animate={{
+                    opacity: activeSection === item.href ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                />
               </a>
             </motion.li>
           ))}

@@ -88,17 +88,13 @@ export function Products() {
 
   return (
     <section
-      id="produtos"
+      id="products"
       className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-28 overflow-hidden"
       aria-label="Seção de Produtos"
     >
-      {/* Background com gradiente */}
       <div className="absolute inset-0 bg-linear-to-b from-[#0d112e] to-[#040a27] -z-10" />
-
-      {/* Efeito de glow */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-[#4984c8]/5 rounded-full blur-3xl -z-10" />
-
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -106,7 +102,6 @@ export function Products() {
         viewport={{ once: true, margin: "-100px" }}
         className="max-w-7xl mx-auto"
       >
-        {/* Título */}
         <motion.div
           variants={itemVariants}
           className="text-center mb-16 lg:mb-20"
@@ -118,10 +113,7 @@ export function Products() {
             Escolha a solução ideal para sua jornada Web3
           </p>
         </motion.div>
-
-        {/* Container principal */}
         <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Grade de produtos */}
           <motion.div
             variants={containerVariants}
             className="lg:col-span-1 space-y-3"
@@ -137,7 +129,6 @@ export function Products() {
                     : "bg-[#0c112f]/40 border border-white/10 hover:border-[#35a7ff]/40 hover:shadow-lg hover:shadow-[#35a7ff]/10"
                 }`}
               >
-                {/* Badge destacado */}
                 {product.highlighted && (
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
@@ -149,8 +140,6 @@ export function Products() {
                     escolhido
                   </motion.div>
                 )}
-
-                {/* Conteúdo */}
                 <div className="flex items-start gap-3">
                   <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0">
                     <Image
@@ -172,8 +161,6 @@ export function Products() {
               </motion.button>
             ))}
           </motion.div>
-
-          {/* Detalhes do produto */}
           {activeProduct && (
             <motion.div
               key={activeProduct.id}
@@ -201,8 +188,6 @@ export function Products() {
                   </p>
                 </div>
               </div>
-
-              {/* Features */}
               <div className="space-y-3 mb-8">
                 {activeProduct.features.map((feature, idx) => (
                   <motion.div
@@ -221,8 +206,6 @@ export function Products() {
                   </motion.div>
                 ))}
               </div>
-
-              {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -235,8 +218,6 @@ export function Products() {
           )}
         </div>
       </motion.div>
-
-      {/* Divisor decorativo */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-b from-transparent to-[#0a0e27] pointer-events-none" />
     </section>
   );

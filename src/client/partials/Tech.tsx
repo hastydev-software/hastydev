@@ -64,9 +64,9 @@ const itemVariants = {
 export function Tech() {
   return (
     <section
-      id="tecnologia"
+      id="tech"
       className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-28 overflow-hidden"
-      aria-label="Seção de Tecnologia"
+      aria-label="Seção de Tecnologia e Plataforma"
     >
       {/* Background com gradiente */}
       <div

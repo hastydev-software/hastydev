@@ -28,7 +28,7 @@ export function About() {
 
   return (
     <section
-      id="sobre"
+      id="about"
       className="relative bg-linear-to-b from-[#0f163f] via-[#0a0e27] to-[#060a1b] overflow-hidden py-24 md:py-32 lg:py-40"
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#35a7ff]/5 rounded-full blur-3xl -z-10" />
