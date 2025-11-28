@@ -136,8 +136,11 @@ export function Products() {
                     transition={{ type: "spring", stiffness: 200 }}
                     className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 bg-white text-[#0a0e27] rounded-full px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-bold flex items-center gap-0.5 sm:gap-1 shadow-lg"
                   >
-                    <Trophy className="w-2.5 h-2.5 sm:w-3 sm:h-3" aria-hidden="true" />O mais
-                    escolhido
+                    <Trophy
+                      className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+                      aria-hidden="true"
+                    />
+                    O mais escolhido
                   </motion.div>
                 )}
                 <div className="flex items-start gap-2 sm:gap-3">
@@ -210,6 +213,12 @@ export function Products() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-linear-to-r from-[#35a7ff] to-[#4984c8] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#35a7ff]/30 transition-all duration-300"
+                onClick={() => {
+                  const element = document.querySelector("#contato");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Começar agora
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />

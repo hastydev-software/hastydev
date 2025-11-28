@@ -125,6 +125,12 @@ export function Tech() {
               style={{
                 background: "linear-gradient(90deg, #0e1e31, #4984c8, #0e1e31)",
               }}
+              onClick={() => {
+                const element = document.querySelector("#contato");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Descubra como unir tecnologia e segurança
               <ArrowRight
