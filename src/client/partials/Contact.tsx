@@ -21,11 +21,6 @@ export function Contact() {
     mensagem: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -35,19 +30,31 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setSubmitStatus("success");
-      setFormData({ nome: "", empresa: "", email: "", mensagem: "" });
-      setTimeout(() => setSubmitStatus("idle"), 5000);
-    } catch {
-      setSubmitStatus("error");
-      setTimeout(() => setSubmitStatus("idle"), 5000);
-    } finally {
-      setIsSubmitting(false);
+    
+    // Formatar mensagem para WhatsApp
+    const { nome, empresa, email, mensagem } = formData;
+    
+    let whatsappMessage = `Olá! Meu nome é *${nome}*`;
+    if (empresa) {
+      whatsappMessage += ` da empresa *${empresa}*`;
     }
+    whatsappMessage += `.
+
+`;
+    whatsappMessage += `Email: ${email}
+
+`;
+    if (mensagem) {
+      whatsappMessage += `Mensagem:
+${mensagem}`;
+    }
+    
+    // Redirecionar para WhatsApp
+    const whatsappURL = `https://wa.me/5511994458337?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappURL, '_blank');
+    
+    // Limpar formulário após redirecionar
+    setFormData({ nome: "", empresa: "", email: "", mensagem: "" });
   };
 
   const containerVariants = {
@@ -304,7 +311,6 @@ export function Contact() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  disabled={isSubmitting}
                   className={cn(
                     "w-full group relative inline-flex items-center justify-center gap-2 px-8 py-3.5",
                     "text-white font-semibold text-base rounded-lg",
@@ -312,7 +318,6 @@ export function Contact() {
                     "hover:shadow-lg hover:shadow-[#35a7ff]/40",
                     "focus:outline-none focus:ring-2 focus:ring-[#35a7ff] focus:ring-offset-2 focus:ring-offset-[#0e1e31]",
                     "active:scale-95 overflow-hidden",
-                    "disabled:opacity-70 disabled:cursor-not-allowed",
                     "border-[0.2px] border-white border-solid"
                   )}
                   style={{
@@ -322,28 +327,11 @@ export function Contact() {
                   aria-label="Enviar formulário de contato"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    {isSubmitting && (
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{
-                          duration: 1,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
-                        className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full"
-                      />
-                    )}
-                    {isSubmitting && "Enviando..."}
-                    {submitStatus === "success" && "Consultoria agendada! ✓"}
-                    {submitStatus !== "success" && !isSubmitting && (
-                      <>
-                        Agendar demo
-                        <ArrowRight
-                          className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                          aria-hidden="true"
-                        />
-                      </>
-                    )}
+                    Falar no WhatsApp
+                    <ArrowRight
+                      className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
                   </span>
                   <motion.span
                     className="absolute inset-0 bg-white/20"
@@ -352,16 +340,6 @@ export function Contact() {
                     transition={{ duration: 0.3 }}
                   />
                 </motion.button>
-
-                {submitStatus === "error" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm"
-                  >
-                    Erro ao enviar. Tente novamente.
-                  </motion.div>
-                )}
               </form>
 
               {/* Benefits */}
